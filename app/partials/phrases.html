@@ -1,16 +1,23 @@
-<h1>Generate random phrases</h1>
-<textarea>{{words}}</textarea>
-
-<form ng-submit="getRandomWords()" class="form well">
-  <div class="control-group">
-    <label class="control-label" for="wordCount">How many words</label>
-    <div class="controls">
-      <input type="text" class="input-xlarge" id="wordCount" ng-model="wordCount" placeholder="" />
-    </div>
+<div class="row">
+  <div class="span12">
+    <h1>Generate random phrases</h1>
   </div>
-  <div class="control-group">
-    <div class="controls">
-      <button type="submit" class="btn btn-primary"><i class="icon-ok icon-white"></i> Get Words</button>
+  <div class="span5">
+    <form ng-submit="getRandomWords()" class="form form-horizontal well">
+    <div class="control-group">
+      <label class="control-label" for="wordCount">Number of words</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge span1" id="wordCount" ng-model="wordCount" placeholder="" />
+      </div>
     </div>
+    <div class="control-group">
+      <div class="controls">
+        <button type="submit" class="btn btn-primary">Generate <i class="icon-arrow-right icon-white"></i></button>
+      </div>
+    </div>
+  </form>
   </div>
-</form>
+  <div class="span7">
+    <textarea>{{words}}</textarea>
+  </div>  
+</div>
