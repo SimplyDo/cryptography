@@ -13,7 +13,7 @@ servicesModule.factory('WordService', function($http) {
   var newServiceInstance = {};
   var wordList = [];
   
-  $http({method: 'GET', url: 'lib/wordList/2of12.txt'}).
+  $http({method: 'GET', url: 'lib/wordList/2of12-unix.txt'}).
         success(function(data, status, headers, config) {
 
           // this callback will be called asynchronously
