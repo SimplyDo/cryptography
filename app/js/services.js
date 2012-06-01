@@ -19,7 +19,7 @@ servicesModule.factory('WordService', function($http) {
           // this callback will be called asynchronously
           // when the response is available
 
-          wordList = data.split("\r\n");
+          wordList = data.split("\n");
 
         }).
         error(function(data, status, headers, config) {
