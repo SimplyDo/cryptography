@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="span12">
+    <h1>Encrypt and decrypt text</h1>
+    <p>{{feedBack}}</p>
+  </div>
+
+
+  <div class="span12">
+    <div class="control-group">
+        <label class="control-label" for="passPhraseInput">Enter a custom pass phrase or <a ng-click="newPassPhrase();">generate random phrase</a></label>
+        <div class="controls">
+          <textarea class="input-xlarge" id="passPhraseInput" ng-model="passphrase" placeholder=""></textarea>
+          
+        </div>
+      </div>
+  </div>
+
+  <div class="span6">
+    <form ng-submit="encrypt()" class="form well">
+      <h2>Encrypt a text</h2>
+      <div class="control-group">
+        <label class="control-label" for="messageInput">Enter your secret text</label>
+        <div class="controls">
+          <textarea class="input-xlarge" id="messageInput" ng-model="message" placeholder=""></textarea>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <button type="submit" class="btn btn-primary" ng-disabled="message == ''"><i class="icon-ok icon-white"></i> Encrypt text</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="span6">
+    <form ng-submit="decrypt()" class="form well">
+      <h2>Decrypt a cypher</h2>
+      <div class="control-group">
+        <label class="control-label" for="cypherInput">Enter the cypher</label>
+        <div class="controls">
+          <textarea class="input-xlarge" id="cypherInput" ng-model="cypher" placeholder=""></textarea>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <button type="submit" class="btn btn-primary" ng-disabled="cypher == ''"><i class="icon-eye-open icon-white"></i> Decrypt cypher</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="span12">
+    <a class="btn btn-inverse" ng-click="clear();"  ng-hide="passphrase == '' && message == '' && passphrase == ''"><i class="icon-refresh icon-white"></i> Clear all Fields</a>
+  </div>
+
+</div>
