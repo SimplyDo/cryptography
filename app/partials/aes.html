@@ -1,7 +1,7 @@
 <div class="row">
   <div class="span12">
     <h1>Encrypt and decrypt text</h1>
-    <p>{{feedBack}}</p>
+    <p class="status {{status}}">{{feedBack}}</p>
   </div>
 
 
@@ -16,34 +16,34 @@
   </div>
 
   <div class="span6">
-    <form ng-submit="encrypt()" class="form well">
-      <h2>Encrypt a text</h2>
+    <form ng-submit="encrypt()" class="form well plain">
+      <h2>Plain text</h2>
       <div class="control-group">
-        <label class="control-label" for="messageInput">Enter your secret text</label>
+        <label class="control-label" for="messageInput">Enter your text</label>
         <div class="controls">
           <textarea class="input-xlarge" id="messageInput" ng-model="message" placeholder=""></textarea>
         </div>
       </div>
       <div class="control-group">
         <div class="controls">
-          <button type="submit" class="btn btn-primary" ng-disabled="message == ''"><i class="icon-ok icon-white"></i> Encrypt text</button>
+          <button type="submit" class="btn btn-primary" ng-disabled="message == ''">Encrypt text <i class="icon-arrow-right icon-white"></i></button>
         </div>
       </div>
     </form>
   </div>
 
   <div class="span6">
-    <form ng-submit="decrypt()" class="form well">
-      <h2>Decrypt a cypher</h2>
+    <form ng-submit="decrypt()" class="form well cypher">
+      <h2>Encrypted text</h2>
       <div class="control-group">
-        <label class="control-label" for="cypherInput">Enter the cypher</label>
+        <label class="control-label" for="cypherInput">Enter a cypher</label>
         <div class="controls">
           <textarea class="input-xlarge" id="cypherInput" ng-model="cypher" placeholder=""></textarea>
         </div>
       </div>
       <div class="control-group">
         <div class="controls">
-          <button type="submit" class="btn btn-primary" ng-disabled="cypher == ''"><i class="icon-eye-open icon-white"></i> Decrypt cypher</button>
+          <button type="submit" class="btn btn-primary" ng-disabled="cypher == ''"><i class="icon-arrow-left icon-white"></i> Decrypt cypher</button>
         </div>
       </div>
     </form>

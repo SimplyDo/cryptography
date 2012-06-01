@@ -12,6 +12,7 @@ function aesCtrl($scope,WordService) {
   $scope.cypherString = '';
   $scope.passphrase = '';
   $scope.feedBack = '';
+  $scope.status = '';
 
 
 
@@ -27,9 +28,13 @@ function aesCtrl($scope,WordService) {
 
       $scope.feedBack = 'You Message was successfully encrypted.';
 
+      $scope.status = 'success';
+
     } else {
 
       $scope.feedBack = 'Message and Pass phrase are required';
+
+      $scope.status = 'error';
 
     }
     
@@ -43,6 +48,8 @@ function aesCtrl($scope,WordService) {
 
       $scope.feedBack = 'Cypher and Pass phrase are required';
 
+      $scope.status = 'error';
+
     } else {
 
       $scope.message = CryptoJS.AES.decrypt($scope.cypher, $scope.passphrase).toString(CryptoJS.enc.Utf8);
@@ -51,6 +58,8 @@ function aesCtrl($scope,WordService) {
 
         $scope.feedBack = 'Cypher and Key do not match';
 
+        $scope.status = 'error';
+
       } else {
 
         $scope.cypherString = '';
@@ -58,6 +67,8 @@ function aesCtrl($scope,WordService) {
         $scope.cypher = '';
 
         $scope.feedBack = 'Your Cypher was successfully decrypted.';
+
+        $scope.status = 'success';
 
       }
 
@@ -79,6 +90,7 @@ function aesCtrl($scope,WordService) {
     $scope.cypherString = '';
     $scope.passphrase = '';
     $scope.feedBack = '';
+    $scope.status = '';
     
   }
 

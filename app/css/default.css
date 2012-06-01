@@ -714,3 +714,7 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .show{display:block;}
 .invisible{visibility:hidden;}
 body{margin-top:60px;}
+form.plain{background-color:green;}
+form.cypher{background-color:yellow;}
+p.status.success{color:green;}
+p.status.error{color:red;font-weight:bold;}
