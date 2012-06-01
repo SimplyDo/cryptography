@@ -10,7 +10,8 @@
   <div class="control-group">
     <label class="control-label" for="passPhraseInput">Pick a pass phrase</label>
     <div class="controls">
-      <input class="input-xlarge" id="passPhraseInput" ng-model="passphrase" placeholder="" />
+      <textarea class="input-xlarge" id="passPhraseInput" ng-model="passphrase" placeholder=""></textarea>
+      <a ng-click="newPassPhrase();">Generate random phrase</a>
     </div>
   </div>
   <div class="control-group">

@@ -3,13 +3,17 @@
 /* Controllers */
 
 
-function encryptCtrl($scope) {
+function encryptCtrl($scope,WordService) {
+
+  var passPhraseWordCount = 18;
 
   $scope.message = '';
   $scope.cypher = '';
   $scope.cypherString = '';
-  $scope.passphrase = '';
+  $scope.passphrase = WordService.getWords(passPhraseWordCount);
   $scope.status = '';
+
+
 
   $scope.encrypt = function () {
 
@@ -28,6 +32,12 @@ function encryptCtrl($scope) {
       $scope.status = 'Message and Pass phrase are required';
 
     }
+    
+  }
+
+  $scope.newPassPhrase = function () {
+
+    $scope.passphrase = WordService.getWords(passPhraseWordCount);
     
   }
 
@@ -101,10 +111,6 @@ function decryptCtrl($scope) {
 
 
 
-
-
-
-
 function navigationCtrl($scope, $location) {
 
   //required to high light the active navigational point
@@ -113,5 +119,17 @@ function navigationCtrl($scope, $location) {
 }
 
 function aboutCtrl() {
+
+}
+
+function phrasesCtrl($scope,WordService) {
+
+  $scope.wordCount = 18;
+
+  $scope.getRandomWords = function () {
+
+    $scope.words = WordService.getWords($scope.wordCount);
+    
+  }
 
 }
