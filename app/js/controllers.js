@@ -3,14 +3,13 @@
 /* Controllers */
 
 
-function SymmetricalCtrl($scope) {
+function encryptCtrl($scope) {
 
   $scope.message = '';
   $scope.cypher = '';
   $scope.cypherString = '';
   $scope.passphrase = '';
   $scope.status = '';
-  $scope.interfaceMode = 'encrypt';
 
   $scope.encrypt = function () {
 
@@ -24,8 +23,6 @@ function SymmetricalCtrl($scope) {
 
       $scope.status = 'You Message was successfully encrypted. See Cypher and Pass Phrase below.';
 
-      $scope.interfaceMode = 'decrypt';
-
     } else {
 
       $scope.status = 'Message and Pass phrase are required';
@@ -33,6 +30,31 @@ function SymmetricalCtrl($scope) {
     }
     
   }
+
+  $scope.clear = function () {
+
+    $scope.message = '';
+    $scope.cypher = '';
+    $scope.cypherString = '';
+    $scope.passphrase = '';
+    $scope.status = '';
+    
+  }
+
+}
+
+
+
+
+
+
+function decryptCtrl($scope) {
+
+  $scope.message = '';
+  $scope.cypher = '';
+  $scope.cypherString = '';
+  $scope.passphrase = '';
+  $scope.status = '';
 
   $scope.decrypt = function () {
 
@@ -55,10 +77,9 @@ function SymmetricalCtrl($scope) {
 
         $scope.cypher = '';
 
-        $scope.status = 'Your Cypher was successfully decrypted. See message below.'
+        $scope.passphrase = '';
 
-        $scope.interfaceMode = 'encrypt';
-
+        $scope.status = 'Your Cypher was successfully decrypted. See message below.';
 
       }
 
@@ -75,5 +96,22 @@ function SymmetricalCtrl($scope) {
     $scope.status = '';
     
   }
+
+}
+
+
+
+
+
+
+
+function navigationCtrl($scope, $location) {
+
+  //required to high light the active navigational point
+  $scope.location = $location;
+
+}
+
+function aboutCtrl() {
 
 }
