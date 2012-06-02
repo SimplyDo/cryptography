@@ -111,18 +111,20 @@ function aboutCtrl() {
 
 }
 
-function homeCtrl() {
+function homeCtrl(WordService) {
 
 }
 
 function phrasesCtrl($scope,WordService) {
 
-  $scope.wordCount = 18;
+  $scope.wordCount = 5;
 
   $scope.getRandomWords = function () {
 
     $scope.words = WordService.getWords($scope.wordCount);
     
   }
+
+  $scope.getRandomWords();
 
 }

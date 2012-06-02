@@ -1,23 +1,39 @@
 <div class="row">
+  <div class="span8">
+    <div class="hero-unit">
+      <h1>Need a key?</h1>
+      <p>Generate random phrases.</p>
+    </div>
+  </div>
+
+  <div class="span4">
+    <p class="large">Typical passwords are <a href="http://xkcd.com/936/" target="new">hard to remember yet easy to crack</a>.</p>
+    <p class="large">Why not use a somewhat longer but easy to remember sequence of random words instead?</p>
+  </div>
+
   <div class="span12">
-    <h1>Generate random phrases</h1>
+    <h2>Your random key:</h2>
   </div>
-  <div class="span5">
-    <form ng-submit="getRandomWords()" class="form form-horizontal well">
-    <div class="control-group">
-      <label class="control-label" for="wordCount">Number of words</label>
-      <div class="controls">
-        <input type="text" class="input-xlarge span1" id="wordCount" ng-model="wordCount" placeholder="" />
-      </div>
-    </div>
-    <div class="control-group">
-      <div class="controls">
-        <button type="submit" class="btn btn-primary">Generate <i class="icon-arrow-right icon-white"></i></button>
-      </div>
-    </div>
-  </form>
+  
+  <div class="span8">
+    <textarea id="passPhrase" ng-model="words" class="large"></textarea>
+    <p>This site uses a large but <a href="lib/wordList/2of12-unix.txt" target="new">easily accessible word list</a>. The longer your phrase is the more secure and harder to guess it is.</p>
   </div>
-  <div class="span7">
-    <textarea>{{words}}</textarea>
-  </div>  
+
+  <div class="span3">
+    <form ng-submit="getRandomWords()" class="form">
+      <div class="control-group">
+        <div class="controls">
+          <button type="submit" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i> Generate Words</button>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="wordCount">Number of words</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge span1" id="wordCount" ng-model="wordCount" placeholder="" />
+        </div>
+      </div>
+    </form>
+  </div>
+
 </div>

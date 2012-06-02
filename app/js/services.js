@@ -35,16 +35,21 @@ servicesModule.factory('WordService', function($http) {
       var randomWords = [];
       var totalWordCount = wordList.length;
       var randomIndex;
+
+      // check if wordlist had been loaded successfully yet
+      if (wordList.length > 0) {
       
-      for (var i=0; i<requestedWordCount; i++) {
+        for (var i=0; i<requestedWordCount; i++) {
 
-        randomIndex = Math.floor(Math.random()*totalWordCount);
+          randomIndex = Math.floor(Math.random()*totalWordCount);
 
-        randomWords.push(wordList[randomIndex]);
+          randomWords.push(wordList[randomIndex]);
+
+        }
+
+        return randomWords.join(' ');
 
       }
-
-      return randomWords.join(' ');
  
     };
     

@@ -1,25 +1,38 @@
 <div class="row">
+  <div class="span8">
+    <div class="hero-unit">
+      <h1>Like privacy?</h1>
+      <p>Encrypt any text</p>
+    </div>
+  </div>
+
+  <div class="span4">
+    <p class="large">Encrypt any text right in your browser. Nothing is sent to a server.</p>
+    <p class="large"><a href="#/about">Learn more</a> about the Advanced Encryption Standard (AES) used.</p>
+  </div>
+
+
   <div class="span12">
-    <h1>Encrypt and decrypt text</h1>
+    <h2>1. Key</h2>
+    <p>The key is used to encrypt a text into a cypher and vice versa. Longer keys are better.</p>
+    <label class="control-label" for="passPhrase">Enter a custom key or <a ng-click="newPassPhrase();">generate random phrase</a></label>
+    <textarea class="input-xlarge" id="passPhrase" ng-model="passphrase" placeholder=""></textarea>
+  </div>
+
+  <div class="span12">
+    <h2>2. Content</h2>
+    <p>Using the key above you can encrypt a new text or descrypt a previously encrypted text.</p>
     <p class="status {{status}}" ng-show="feedBack != ''">{{feedBack}}</p>
   </div>
 
 
-  <div class="span10">
-    <div class="well">
-    <h2>Pass phrase (or Key)</h2>
-        <label class="control-label" for="passPhraseInput">Enter a custom pass phrase or <a ng-click="newPassPhrase();">generate random phrase</a></label>
-        <textarea class="input-xlarge" id="passPhraseInput" ng-model="passphrase" placeholder=""></textarea>
-    </div>
-  </div>
-
-  <div class="span5">
+  <div class="span6">
     <form ng-submit="encrypt()" class="form well plain">
-      <h2>Plain text</h2>
+      <h3>Encrypt</h3>
       <div class="control-group">
         <label class="control-label" for="messageInput">Enter your text</label>
         <div class="controls">
-          <textarea class="input-xlarge" id="messageInput" ng-model="message" placeholder=""></textarea>
+          <textarea id="messageInput" ng-model="message" placeholder=""></textarea>
         </div>
       </div>
       <div class="control-group">
@@ -30,13 +43,13 @@
     </form>
   </div>
 
-  <div class="span5">
+  <div class="span6">
     <form ng-submit="decrypt()" class="form well cypher">
-      <h2>Encrypted text</h2>
+      <h3>Decrypt</h3>
       <div class="control-group">
         <label class="control-label" for="cypherInput">Enter a cypher</label>
         <div class="controls">
-          <textarea class="input-xlarge" id="cypherInput" ng-model="cypher" placeholder=""></textarea>
+          <textarea id="cypherInput" ng-model="cypher" placeholder=""></textarea>
         </div>
       </div>
       <div class="control-group">
