@@ -1,21 +1,19 @@
 <div class="row">
   <div class="span12">
     <h1>Encrypt and decrypt text</h1>
-    <p class="status {{status}}">{{feedBack}}</p>
+    <p class="status {{status}}" ng-show="feedBack != ''">{{feedBack}}</p>
   </div>
 
 
-  <div class="span12">
-    <div class="control-group">
+  <div class="span10">
+    <div class="well">
+    <h2>Pass phrase (or Key)</h2>
         <label class="control-label" for="passPhraseInput">Enter a custom pass phrase or <a ng-click="newPassPhrase();">generate random phrase</a></label>
-        <div class="controls">
-          <textarea class="input-xlarge" id="passPhraseInput" ng-model="passphrase" placeholder=""></textarea>
-          
-        </div>
-      </div>
+        <textarea class="input-xlarge" id="passPhraseInput" ng-model="passphrase" placeholder=""></textarea>
+    </div>
   </div>
 
-  <div class="span6">
+  <div class="span5">
     <form ng-submit="encrypt()" class="form well plain">
       <h2>Plain text</h2>
       <div class="control-group">
@@ -32,7 +30,7 @@
     </form>
   </div>
 
-  <div class="span6">
+  <div class="span5">
     <form ng-submit="decrypt()" class="form well cypher">
       <h2>Encrypted text</h2>
       <div class="control-group">

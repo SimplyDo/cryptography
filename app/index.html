@@ -11,11 +11,14 @@
     <div class="navbar-inner">
       <div class="container">
         <ul class="nav" >
+          <li ng-class="{active: location.path() == '/home'}">
+            <a href="#/home">Home</a>
+          </li>
           <li ng-class="{active: location.path() == '/aes'}">
             <a href="#/aes">Encrypt and Decrypt</a>
           </li>
           <li ng-class="{active: location.path() == '/phrases'}">
-            <a href="#/phrases">Random Phrase</a>
+            <a href="#/phrases">Phrase Generator</a>
           </li>
           <li ng-class="{active: location.path() == '/about'}">
             <a href="#/about">About</a>
