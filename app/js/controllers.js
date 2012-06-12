@@ -111,17 +111,24 @@ function aboutCtrl() {
 
 }
 
+function memorizeCtrl() {
+
+}
+
 function homeCtrl(WordService) {
 
 }
 
 function phrasesCtrl($scope,WordService) {
 
-  $scope.wordCount = 5;
+  $scope.wordCount = 4;
+  $scope.wordListLength = WordService.wordListLength();
 
   $scope.getRandomWords = function () {
 
     $scope.words = WordService.getWords($scope.wordCount);
+    $scope.permutations = WordService.calculatePermutations($scope.wordCount);
+    $scope.lastWordCount = $scope.wordCount;
     
   }
 

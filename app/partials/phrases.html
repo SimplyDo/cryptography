@@ -17,14 +17,14 @@
   
   <div class="span8">
     <textarea id="passPhrase" ng-model="words" class="large"></textarea>
-    <p>This site uses a large but <a href="lib/wordList/2of12-unix.txt" target="new">easily accessible word list</a>. The longer your phrase is the more secure and harder to guess it is.</p>
+    <p>One of {{permutations}} possible {{lastWordCount}}-word permutations based on our {{wordListLength}} words long list. The longer your phrase is the more secure and harder to guess it is!</p>
   </div>
 
   <div class="span3">
     <form ng-submit="getRandomWords()" class="form">
       <div class="control-group">
         <div class="controls">
-          <button type="submit" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i> Generate Words</button>
+          <button type="submit" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i> Generate a new key</button>
         </div>
       </div>
       <div class="control-group">

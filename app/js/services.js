@@ -37,7 +37,7 @@ servicesModule.factory('WordService', function($http) {
       var randomIndex;
 
       // check if wordlist had been loaded successfully yet
-      if (wordList.length > 0) {
+      if (totalWordCount > 0) {
       
         for (var i=0; i<requestedWordCount; i++) {
 
@@ -48,6 +48,33 @@ servicesModule.factory('WordService', function($http) {
         }
 
         return randomWords.join(' ');
+
+      }
+ 
+    };
+
+
+    newServiceInstance.calculatePermutations = function(requestedWordCount) {
+      
+      var totalWordCount = wordList.length;
+      var permutations = '';
+
+      if (totalWordCount > 0) {
+
+        permutations = Math.pow(totalWordCount, requestedWordCount) + ' ';
+        return permutations;
+
+      }
+ 
+    };
+
+    newServiceInstance.wordListLength = function() {
+      
+      var totalWordCount = wordList.length;
+
+      if (totalWordCount > 0) {
+
+        return totalWordCount;
 
       }
  

@@ -716,7 +716,7 @@ form.plain{background-color:green;}
 form.cypher{background-color:yellow;}
 form textarea{font-size:1.1em;width:95%;height:8em;}
 #passPhrase{font-size:1.4em;width:100%;height:2.5em;line-height:1.3em;}#passPhrase.large{height:12em;}
-h2{font-size:1.5em;}
-p.large{font-size:1.5em;color:#999;line-height:1.5em;}
+h2{font-size:1.7em;margin:0.3em 0;}
+p{font-size:1.1em;line-height:1.5em;}p.large{font-size:1.5em;color:#999;}
 p.status{font-weight:bold;font-size:1.1em;padding:5px 10px;background-color:#FFC;}p.status.success{color:green;}
 p.status.error{color:red;}
