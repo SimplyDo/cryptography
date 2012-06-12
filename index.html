@@ -2,7 +2,7 @@
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>Simply Do - Cryptography Project</title>
   <link rel="stylesheet" href="css/default.css"/>
 </head>
 <body>
@@ -20,18 +20,50 @@
           <li ng-class="{active: location.path() == '/phrases'}">
             <a href="#/phrases">Key Maker</a>
           </li>
-          <li ng-class="{active: location.path() == '/memorize'}">
-            <a href="#/memorize">Memorize</a>
-          </li>
-          <li ng-class="{active: location.path() == '/about'}">
-            <a href="#/about">About</a>
-          </li>
+          <!--
+            <li ng-class="{active: location.path() == '/memorize'}">
+              <a href="#/memorize">Memorize</a>
+            </li>
+            <li ng-class="{active: location.path() == '/about'}">
+              <a href="#/about">About</a>
+            </li>
+          -->
+        </ul>
+        <ul class="nav pull-right">
+          <li><a href="http://simplydo.com" target="new"><i class="icon-arrow-right icon-white"></i> A Simply Do project</a></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <div ng-view class="container"></div>
+  <div ng-view></div>
+
+  <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <p>© 2012 <a href="http://simplydo.com" target="new">Simply Do</a>, LLC.<br />All Rights Reserved.</p>
+          </div>
+          <div class="span4">
+            <ul class="unstyled">
+              <li>Follow <a href="http://twitter.com/#!/SimplyDoThat" target="new">@SimplyDoThat</a> on Twitter</li>
+            </ul>
+          </div>
+          <div class="span4">
+            <ul class="unstyled">
+              <li>The source code is open and <a href="https://github.com/SimplyDo/cryptography" target="new">available on Github</a></li>
+              <li>Created with <a href="http://angularjs.org/" target="new">AngularJS</a> by Google</li>
+              <li>Encryption through <a href="http://code.google.com/p/crypto-js/" target="new">CryptoJS</a></li>
+              <li>Words lists based on <a href="http://wordlist.sourceforge.net/" target="new">Kevin's Word List Page</a></li>
+              <li>The UI is <a href="http://twitter.github.com/bootstrap/" target="new">Twitter Bootstrapped</a></li>
+              <li>Hosted with <a href="http://pages.github.com/" target="new">Github pages</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>  
+    </div>  
 
   <script src="lib/angular/angular.js"></script>
   <script src="js/app.js"></script>

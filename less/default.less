@@ -1,25 +1,19 @@
 @import "../lib/bootstrap/less/bootstrap";
+@import "mixins";
 //@import "mixins";
 @iconSpritePath: "../lib/bootstrap/img/glyphicons-halflings.png";
 @iconWhiteSpritePath: "../lib/bootstrap/img/glyphicons-halflings-white.png";
 
 
 
-body {
-  margin-top:60px;
-}
-
-
 form {
   &.plain {
-    background-color:green;
   }
   &.cypher {
-    background-color:yellow;
   }
   textarea {
     font-size:1.1em;
-    width:95%;
+    width:100%;
     height:8em;
   }
 }
@@ -35,7 +29,7 @@ form {
 }
 
 h2 {
-  font-size:1.7em;
+  font-size:1.3em;
   margin:0.3em 0;
 }
 
@@ -44,8 +38,7 @@ h2 {
 p {
   font-size:1.1em;
   line-height:1.5em;
-  &.large {
-    font-size:1.5em;
+  &.note {
     color:#999;
   }
 }
@@ -61,5 +54,35 @@ p.status {
   }
   &.error {
     color:red;
+  }
+}
+
+
+#footer {
+  background-color:#333;
+  padding:2em 0;
+  margin-top:50px;
+  border-top:5px solid rgba(0,0,0,0.3);
+  color:#AAA;
+}
+
+#top {
+  background-color:#8FBE00;
+  margin-bottom:40px;
+  padding-top:80px;
+  padding-bottom:30px;
+  border-bottom:1px solid #666;
+  .box-shadow(0px, 3px, 0px, rgba(0,0,0,0.2);
+  h1 {
+    font-size:4em;
+    margin-bottom:20px;
+    margin-top:30px;
+    color:#FFF;
+    .text-shadow(0px, -1px, 0px, rgba(0,0,0,0.5));
+  }
+  p {
+    font-size:1.5em;
+    color:#F9F2E7;
+    .text-shadow(0px, -1px, 0px, rgba(0,0,0,0.5));
   }
 }

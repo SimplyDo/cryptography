@@ -5,7 +5,7 @@
 
 function aesCtrl($scope,WordService) {
 
-  var passPhraseWordCount = 18;
+  var passPhraseWordCount = 5;
 
   $scope.message = '';
   $scope.cypher = '';
@@ -129,6 +129,7 @@ function phrasesCtrl($scope,WordService) {
     $scope.words = WordService.getWords($scope.wordCount);
     $scope.permutations = WordService.calculatePermutations($scope.wordCount);
     $scope.lastWordCount = $scope.wordCount;
+    $scope.wordListLength = WordService.wordListLength();
     
   }
 

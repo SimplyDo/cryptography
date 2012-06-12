@@ -1,67 +1,69 @@
-<div class="row">
-  <div class="span8">
-    <div class="hero-unit">
-      <h1>Like privacy?</h1>
-      <p>Encrypt any text.</p>
+<div id="top">
+  <div class="container">
+    <div class="row">
+      <div class="span7">
+        <h1>Like privacy?</h1>
+        <p>Encrypt any text.</p>
+      </div>
+      <div class="span5">
+        <p>Encrypt any text right in your browser. Nothing is sent to a server.</p>
+        <p><a href="#/about">Learn more</a> about the Advanced Encryption Standard (AES) used.</p>
+      </div>
     </div>
   </div>
+</div>
+<div class="container">
+  <div class="row">
 
-  <div class="span4">
-    <p class="large">Encrypt any text right in your browser. Nothing is sent to a server.</p>
-    <p class="large"><a href="#/about">Learn more</a> about the Advanced Encryption Standard (AES) used.</p>
-  </div>
+    
+    <div class="span12">
+      <p class="status {{status}}" ng-show="feedBack != ''">{{feedBack}}</p>
+    </div>
+    
+    <div class="span12">
+      <h2>Enter a custom key or <a ng-click="newPassPhrase();">generate random key</a></h2>
+      <textarea class="input-xlarge" id="passPhrase" ng-model="passphrase" placeholder=""></textarea>
+      <p class="note">The key is used to encrypt a text into a cypher and vice versa. Longer keys are better.</p>
+    </div>
 
-
-  <div class="span12">
-    <h2>1. Key</h2>
-    <p>The key is used to encrypt a text into a cypher and vice versa. Longer keys are better.</p>
-    <label class="control-label" for="passPhrase">Enter a custom key or <a ng-click="newPassPhrase();">generate random key</a></label>
-    <textarea class="input-xlarge" id="passPhrase" ng-model="passphrase" placeholder=""></textarea>
-  </div>
-
-  <div class="span12">
-    <h2>2. Content</h2>
-    <p>Using the key above you can encrypt a new text or descrypt a previously encrypted text.</p>
-    <p class="status {{status}}" ng-show="feedBack != ''">{{feedBack}}</p>
-  </div>
+    
 
 
-  <div class="span6">
-    <form ng-submit="encrypt()" class="form well plain">
-      <h3>Encrypt</h3>
-      <div class="control-group">
-        <label class="control-label" for="messageInput">Enter your text</label>
-        <div class="controls">
-          <textarea id="messageInput" ng-model="message" placeholder=""></textarea>
+    <div class="span6">
+      <form ng-submit="encrypt()" class="form plain">
+        <h2>Plain Text</h2>
+        <div class="control-group">
+          <div class="controls">
+            <textarea id="messageInput" ng-model="message" placeholder=""></textarea>
+          </div>
         </div>
-      </div>
-      <div class="control-group">
-        <div class="controls">
-          <button type="submit" class="btn btn-primary" ng-disabled="message == ''">Encrypt text <i class="icon-arrow-right icon-white"></i></button>
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn btn-primary" ng-disabled="message == ''">Encrypt text <i class="icon-arrow-right icon-white"></i></button>
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
 
-  <div class="span6">
-    <form ng-submit="decrypt()" class="form well cypher">
-      <h3>Decrypt</h3>
-      <div class="control-group">
-        <label class="control-label" for="cypherInput">Enter a cypher</label>
-        <div class="controls">
-          <textarea id="cypherInput" ng-model="cypher" placeholder=""></textarea>
+    <div class="span6">
+      <form ng-submit="decrypt()" class="form cypher">
+        <h2>Cypher</h2>
+        <div class="control-group">
+          <div class="controls">
+            <textarea id="cypherInput" ng-model="cypher" placeholder=""></textarea>
+          </div>
         </div>
-      </div>
-      <div class="control-group">
-        <div class="controls">
-          <button type="submit" class="btn btn-primary" ng-disabled="cypher == ''"><i class="icon-arrow-left icon-white"></i> Decrypt cypher</button>
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn btn-primary" ng-disabled="cypher == ''"><i class="icon-arrow-left icon-white"></i> Decrypt cypher</button>
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
 
-  <div class="span12">
-    <a class="btn btn-inverse" ng-click="clear();"  ng-hide="passphrase == '' && message == '' && passphrase == ''"><i class="icon-refresh icon-white"></i> Clear all Fields</a>
-  </div>
+    <div class="span12">
+      <a class="btn btn-inverse" ng-click="clear();"  ng-hide="passphrase == '' && message == '' && passphrase == ''"><i class="icon-refresh icon-white"></i> Clear all Fields</a>
+    </div>
 
+  </div>
 </div>
