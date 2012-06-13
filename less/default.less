@@ -73,6 +73,12 @@ p.status {
   padding-bottom:30px;
   border-bottom:1px solid #666;
   .box-shadow(0px, 3px, 0px, rgba(0,0,0,0.2);
+  &.home {
+    background-color:#8ABBCE;
+  }
+  &.keymaker {
+    background-color:#FA6900;
+  }
   h1 {
     font-size:4em;
     margin-bottom:20px;
@@ -84,5 +90,18 @@ p.status {
     font-size:1.5em;
     color:#F9F2E7;
     .text-shadow(0px, -1px, 0px, rgba(0,0,0,0.5));
+    a {
+      color:#F9F2E7;
+      border-bottom:1px solid #FFF;
+      text-decoration:none;
+      font-weight:bold;
+      &:hover {
+        background-color:rgba(0,0,0,0.1);
+        padding-left:4px;
+        padding-right:4px;
+        margin:0 -4px;
+        color:#FFF;
+      }
+    }
   }
 }
