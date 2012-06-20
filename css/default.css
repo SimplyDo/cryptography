@@ -711,6 +711,8 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .hide{display:none;}
 .show{display:block;}
 .invisible{visibility:hidden;}
+.social-buttons{display:block;list-style:none;padding:0;margin:0px;float:right;}
+.social-buttons>li{display:inline-block;margin-left:10px;float:left;}
 form textarea{font-size:1.1em;width:100%;height:8em;}
 #passPhrase{font-size:1.4em;width:100%;height:2.5em;line-height:1.3em;}#passPhrase.large{height:12em;}
 h2{font-size:1.3em;margin:0.3em 0;}

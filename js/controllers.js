@@ -117,6 +117,8 @@ function memorizeCtrl() {
 
 function homeCtrl(WordService) {
 
+  Socialite.load('social-buttons');
+
 }
 
 function phrasesCtrl($scope,WordService) {
