@@ -23,7 +23,7 @@
     <div class="span12">
       <h2>Enter a custom key or <a ng-click="newPassPhrase();">generate random key</a></h2>
       <textarea class="input-xlarge" id="passPhrase" ng-model="passphrase" placeholder=""></textarea>
-      <p class="note">The key is used to encrypt a text into a cypher and vice versa. Longer keys are better.</p>
+      <p class="note">The key is used to encrypt a text into a cypher and vice versa. Longer keys are better. See also: <a href="#/phrases">Key Maker</a></p>
     </div>
 
     
@@ -59,10 +59,6 @@
           </div>
         </div>
       </form>
-    </div>
-
-    <div class="span12">
-      <a class="btn btn-inverse" ng-click="clear();"  ng-hide="passphrase == '' && message == '' && passphrase == ''"><i class="icon-refresh icon-white"></i> Clear all Fields</a>
     </div>
 
   </div>
