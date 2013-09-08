@@ -12,14 +12,15 @@
     <div class="navbar-inner">
       <div class="container">
         <ul class="nav" >
-          <li ng-class="{active: location.path() == '/home'}">
-            <a href="#/home">Home</a>
-          </li>
+          
           <li ng-class="{active: location.path() == '/aes'}">
             <a href="#/aes">Encrypt and Decrypt</a>
           </li>
           <li ng-class="{active: location.path() == '/phrases'}">
             <a href="#/phrases">Key Maker</a>
+          </li>
+          <li ng-class="{active: location.path() == '/about'}">
+            <a href="#/about">About</a>
           </li>
           <!--
             <li ng-class="{active: location.path() == '/memorize'}">
@@ -68,7 +69,6 @@
     </div>  
 
   <script src="lib/angular/angular.js"></script>
-  <script src="lib/socialite/socialite.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
