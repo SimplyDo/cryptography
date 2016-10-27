@@ -5,7 +5,7 @@
 
 function aesCtrl($scope,WordService) {
 
-  var passPhraseWordCount = 18;
+  var passPhraseWordCount = 5;
 
   $scope.message = '';
   $scope.cypher = '';
@@ -32,7 +32,7 @@ function aesCtrl($scope,WordService) {
 
     } else {
 
-      $scope.feedBack = 'You need to enter or generate a pass phrase to encrypt this text.';
+      $scope.feedBack = 'You need to enter or generate a key phrase to encrypt text.';
 
       $scope.status = 'error';
 
@@ -46,7 +46,7 @@ function aesCtrl($scope,WordService) {
     
     if ($scope.cypher == '' | $scope.passphrase == '' ) {
 
-      $scope.feedBack = 'You need to enter your pass phrase to decrypt this cypher.';
+      $scope.feedBack = 'You need to enter your key phrase to decrypt this cypher.';
 
       $scope.status = 'error';
 
@@ -56,7 +56,7 @@ function aesCtrl($scope,WordService) {
 
       if ($scope.message == '') {
 
-        $scope.feedBack = 'Cypher and pass phrase do not match';
+        $scope.feedBack = 'Cypher and key phrase do not match';
 
         $scope.status = 'error';
 
@@ -117,6 +117,8 @@ function memorizeCtrl() {
 
 function homeCtrl(WordService) {
 
+  Socialite.load('social-buttons');
+
 }
 
 function phrasesCtrl($scope,WordService) {
@@ -129,6 +131,7 @@ function phrasesCtrl($scope,WordService) {
     $scope.words = WordService.getWords($scope.wordCount);
     $scope.permutations = WordService.calculatePermutations($scope.wordCount);
     $scope.lastWordCount = $scope.wordCount;
+    $scope.wordListLength = WordService.wordListLength();
     
   }
 

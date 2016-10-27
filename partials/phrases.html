@@ -1,39 +1,44 @@
-<div class="row">
-  <div class="span8">
-    <div class="hero-unit">
-      <h1>Need a key?</h1>
-      <p>Generate random phrases.</p>
+<div id="top" class="keymaker">
+  <div class="container">
+    <div class="row">
+      <div class="span7">
+        <h1>Need a key?</h1>
+        <p>Generate random phrases.</p>
+      </div> 
+       <div class="span5">
+        <p>Typical passwords are <a href="http://xkcd.com/936/" target="new">hard to remember yet easy to crack</a>.</p>
+        <p>Why not use a somewhat longer but easy to remember sequence of random words instead?</p>
+      </div>
     </div>
   </div>
+</div>
+<div class="container">
+  <div class="row">
 
-  <div class="span4">
-    <p class="large">Typical passwords are <a href="http://xkcd.com/936/" target="new">hard to remember yet easy to crack</a>.</p>
-    <p class="large">Why not use a somewhat longer but easy to remember sequence of random words instead?</p>
-  </div>
+    <div class="span12">
+      <h2>Your random key:</h2>
+    </div>
+    
+    <div class="span8">
+      <textarea id="passPhrase" ng-model="words" class="large"></textarea>
+      <p class="note"><span ng-show="permutations < 9.391653238552226e+307">One of {{permutations}} possible {{lastWordCount}}-word permutations based on our {{wordListLength}} words long list.</span>The longer your phrase is the more secure and harder to guess it is!</p>
+    </div>
 
-  <div class="span12">
-    <h2>Your random key:</h2>
-  </div>
-  
-  <div class="span8">
-    <textarea id="passPhrase" ng-model="words" class="large"></textarea>
-    <p>One of {{permutations}} possible {{lastWordCount}}-word permutations based on our {{wordListLength}} words long list. The longer your phrase is the more secure and harder to guess it is!</p>
-  </div>
-
-  <div class="span3">
-    <form ng-submit="getRandomWords()" class="form">
-      <div class="control-group">
-        <div class="controls">
-          <button type="submit" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i> Generate a new key</button>
+    <div class="span3">
+      <form ng-submit="getRandomWords()" class="form">
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn btn-primary"><i class="icon-arrow-left icon-white"></i> Generate a new key</button>
+          </div>
         </div>
-      </div>
-      <div class="control-group">
-        <label class="control-label" for="wordCount">Number of words</label>
-        <div class="controls">
-          <input type="text" class="input-xlarge span1" id="wordCount" ng-model="wordCount" placeholder="" />
+        <div class="control-group">
+          <label class="control-label" for="wordCount">Number of words</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge span1" id="wordCount" ng-model="wordCount" placeholder="" />
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
 
+  </div>
 </div>
